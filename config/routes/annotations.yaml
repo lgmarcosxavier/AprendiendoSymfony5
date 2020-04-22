@@ -1,3 +1,4 @@
+# indica a Symfony que busque rutas definididas con anotaciones en los siguientes diretorios.
 controllers:
     resource: ../../src/Controller/
     type: annotation

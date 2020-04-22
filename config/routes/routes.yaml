@@ -1,5 +1,14 @@
 
-# the "app_lucky_number" route name is not important yet
-#app_lucky_number:
-#   path: /lucky/number
-#   controller: 'App\Controller\LuckyController::number'
+#mostrar_numero:
+#  path: /mostrar/numero/{numero}
+#  controller: 'App\Controller\LuckyController::mostrarNumero'
+#  requirements:
+#    numero: '[0-9]+'
+
+mostrar_numero_en_letras:
+  path: /mostrar/numero/{letras}
+  controller: 'App\Controller\LuckyController::mostrarNumeroEnLetras'
+  requirements:
+    numero: '[A-Za-z]+'
+
+    

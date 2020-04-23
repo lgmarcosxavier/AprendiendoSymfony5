@@ -1,6 +1,7 @@
 <?php
 
 use App\Controller\BlogController;
+use App\Controller\HomeController;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 return function (RoutingConfigurator $routes) {
@@ -23,5 +24,9 @@ return function (RoutingConfigurator $routes) {
         ])->requirements([
                 'id' => '[0-9]+'
         ]);
+
+    $routes->add('inicio', '/inicio')
+        ->controller([HomeController::class, 'paginaInicio'])
+        ->methods(['GET']);
 
 };

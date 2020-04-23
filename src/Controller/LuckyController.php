@@ -9,14 +9,14 @@ class LuckyController extends AbstractController
 {
     /**
      * @Route(
-     *  "lucky/number", 
+     *  "lucky/number/{max}", 
      *  name="lucky_number", 
      *  methods={"GET", "HEAD"}
      * )
      */
-    public function number()
+    public function number($max)
     {
-        $number = random_int(0, 100);
+        $number = random_int(0, $max);
 
         return $this->render('lucky/number.html.twig', [
             'number' => $number
